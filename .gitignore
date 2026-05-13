@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+*.log
+.DS_Store
+.env
+.env.local
+.env.*.local
+.vercel
+.claude/
+Farza_Shahzad_CV.pdf
+CUSTOMIZATION_GUIDE.md
+DEPLOYMENT_GUIDE.md
+GETTING_STARTED.md
