@@ -10,7 +10,6 @@ dist/
 .env.*.local
 .vercel
 .claude/
-Farza_Shahzad_CV.pdf
 CUSTOMIZATION_GUIDE.md
 DEPLOYMENT_GUIDE.md
 GETTING_STARTED.md
