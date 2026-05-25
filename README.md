@@ -1,294 +1,143 @@
-# Personal Portfolio & CV Website
+# Farza Shahzad — Portfolio
 
-A modern, dark-themed portfolio website built with Next.js, Tailwind CSS, and Framer Motion. Features smooth animations, responsive design, and SEO optimization.
+A personal portfolio site with a **brutalist-editorial** aesthetic: a light "paper" canvas, near-black ink, a single burnt-orange accent, oversized type, hard hairline rules, and numbered sections. Flat by design — no gradients, no glows.
 
-## ✨ Features
+Built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion.
 
-- ✅ **Multi-page routing** with smooth transitions
-- ✅ **Dark minimal design** with professional aesthetics
-- ✅ **Responsive mobile-first layout**
-- ✅ **Smooth animations** using Framer Motion
-- ✅ **SEO optimized** with meta tags and structured data
-- ✅ **Contact form** with email integration ready
-- ✅ **Project showcase** with filtering
-- ✅ **Experience timeline**
-- ✅ **Skills breakdown** by pillar
-- ✅ **CV download** functionality
-- ✅ **Fast performance** (Lighthouse 90+)
+🔗 **Live:** [farzashahzad.vercel.app](https://farzashahzad.vercel.app) <!-- update if the domain differs -->
 
-## 🚀 Quick Start
+## Overview
 
-### Prerequisites
-- Node.js 18+ 
-- npm, yarn, or pnpm
+A single-page site composed of stacked sections:
 
-### Installation
+| # | Section | Notes |
+|---|---------|-------|
+| — | **Hero** | Oversized stacked wordmark, meta bar, statement, grayscale→color portrait, tech ticker |
+| 01 | **About** | Editorial lead paragraph + hard-ruled stat grid |
+| 02 | **Skills** | Capability pillars + "other tools" tag set |
+| 03 | **Experience** | Career index list with hover-invert rows, plus education & leadership |
+| 04 | **Projects** | Filterable index list (All / Flutter / Side Projects) |
+| 05 | **Contact** | Contact details + form posting to `/api/contact` |
 
-1. **Clone the repository**
+The `/skills`, `/experience`, `/projects`, and `/contact` routes are thin redirects to the matching anchors on the homepage, so deep links keep working.
+
+## Tech Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| **Next.js 14** (App Router) | Framework & routing |
+| **React 18** | UI |
+| **TypeScript** | Type safety |
+| **Tailwind CSS** | Styling (design tokens in `tailwind.config.js`) |
+| **Framer Motion** | Scroll / reveal animations |
+| **Vercel Analytics** | Traffic insights |
+| **Resend** | Email delivery (ready to wire into the contact API) |
+
+## Getting Started
+
+**Prerequisites:** Node.js 18+
+
 ```bash
-git clone <repository-url>
-cd portfolioWebsite
-```
-
-2. **Install dependencies**
-```bash
+# install
 npm install
-```
 
-3. **Copy environment variables**
-```bash
-cp .env.example .env.local
-```
-
-4. **Start development server**
-```bash
+# run the dev server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-## 📁 Project Structure
+```bash
+npm run build   # production build
+npm start       # serve the production build
+npm run lint    # lint
+```
+
+## Project Structure
 
 ```
 portfolioWebsite/
 ├── app/
-│   ├── layout.tsx           # Root layout with navbar/footer
-│   ├── page.tsx             # Home page
-│   ├── globals.css          # Global styles
-│   ├── api/
-│   │   └── contact/         # Contact form API
-│   ├── skills/page.tsx      # Skills page
-│   ├── experience/page.tsx  # Experience timeline
-│   ├── projects/page.tsx    # Projects showcase
-│   └── contact/page.tsx     # Contact form
+│   ├── layout.tsx            # Root layout (Navbar, Footer, Analytics)
+│   ├── page.tsx              # Home — composes all sections
+│   ├── globals.css           # Theme tokens, display type, utilities
+│   ├── api/contact/route.ts  # Contact form endpoint (stub, ready for email provider)
+│   ├── skills/page.tsx       # → redirect to /#skills
+│   ├── experience/page.tsx   # → redirect to /#experience
+│   ├── projects/page.tsx     # → redirect to /#projects
+│   └── contact/page.tsx      # → redirect to /#contact
 ├── components/
-│   ├── Navbar.tsx           # Navigation bar
-│   ├── Footer.tsx           # Footer
-│   ├── Hero.tsx             # Hero section
-│   └── About.tsx            # About section
-├── public/                  # Static assets
-├── tailwind.config.js       # Tailwind CSS config
-├── tsconfig.json            # TypeScript config
-└── package.json             # Dependencies
+│   ├── Navbar.tsx            # Fixed top bar with numbered nav
+│   ├── Hero.tsx              # Hero / wordmark
+│   ├── About.tsx             # About + stats
+│   ├── Skills.tsx            # Skill pillars + tools
+│   ├── Experience.tsx        # Career timeline / index
+│   ├── Projects.tsx          # Filterable project index
+│   ├── Contact.tsx           # Contact section + form
+│   ├── SectionHeading.tsx    # Shared numbered section header
+│   └── Footer.tsx            # Footer wordmark + links
+├── data/
+│   └── portfolio.ts          # All content: stats, skills, experience, projects
+├── public/                   # Static assets (portrait, CV PDF)
+├── tailwind.config.js
+├── tsconfig.json
+└── package.json
 ```
 
-## 🎨 Customization
+## Editing Content
 
-### 1. **Update Your Information**
+All copy lives in **[`data/portfolio.ts`](data/portfolio.ts)** — edit it in one place:
 
-#### Navbar & Footer
-- Edit [`components/Navbar.tsx`](components/Navbar.tsx#L19) to change logo/initials
-- Update social links in [`components/Footer.tsx`](components/Footer.tsx#L8)
+- `stats` — the headline numbers in About
+- `skillPillars` — the three capability columns in Skills
+- `otherTools` — the tag set under Skills
+- `experiences` — work history (role, company, date, bullets, tech)
+- `education` / `volunteer` — the cards under Experience
+- `projects` — project list (name, description, tech, `category`, optional `github`)
 
-#### Content Pages
-- **Hero**: Modify typewriter words in [`components/Hero.tsx`](components/Hero.tsx#L5)
-- **About**: Update bio and stats in [`components/About.tsx`](components/About.tsx#L26)
-- **Skills**: Edit skill categories in [`app/skills/page.tsx`](app/skills/page.tsx#L8)
-- **Experience**: Add your work history in [`app/experience/page.tsx`](app/experience/page.tsx#L7)
-- **Projects**: Update project details in [`app/projects/page.tsx`](app/projects/page.tsx#L5)
-- **Contact**: Update contact info in [`app/contact/page.tsx`](app/contact/page.tsx#L65)
+Other quick edits:
 
-### 2. **Theme Customization**
+- **Nav & section names:** [`components/Navbar.tsx`](components/Navbar.tsx)
+- **Hero wordmark:** [`components/Hero.tsx`](components/Hero.tsx)
+- **Contact details & socials:** [`components/Contact.tsx`](components/Contact.tsx), [`components/Footer.tsx`](components/Footer.tsx)
+- **CV download:** replace `public/Farza_Shahzad_CV.pdf` (linked from the Navbar)
 
-Edit colors in [`tailwind.config.js`](tailwind.config.js#L6):
-```javascript
+## Theming
+
+The design is driven by three tokens in **[`tailwind.config.js`](tailwind.config.js)**:
+
+```js
 colors: {
-  accent: '#3b82f6',        // Change primary accent color
-  'accent-cyan': '#06b6d4',
-  'accent-green': '#10b981',
+  paper:  '#e9e5db', // background
+  ink:    '#14130f', // text / borders
+  accent: '#e8590c', // single accent
 }
 ```
 
-Options:
-- Electric Blue: `#3b82f6`
-- Cyan: `#06b6d4`
-- Green: `#10b981`
+Change `accent` to re-skin the whole site in one line. Display type, the section rules, and shared utilities live in [`app/globals.css`](app/globals.css).
 
-### 3. **Add Your CV**
+## Contact Form
 
-1. Place your CV PDF in `public/cv.pdf`
-2. Update the download link in [`components/Navbar.tsx`](components/Navbar.tsx#L58):
-```tsx
-<motion.a href="/cv.pdf" download>
-```
+The form in the Contact section POSTs to [`app/api/contact/route.ts`](app/api/contact/route.ts), which currently validates input and logs the submission. To actually deliver email, wire in [Resend](https://resend.com) (already a dependency):
 
-### 4. **Set Up Email (Contact Form)**
-
-Choose one service:
-
-#### Option A: Resend (Recommended)
-```bash
-npm install resend
-```
-
-1. Get API key from [resend.com](https://resend.com)
-2. Add to `.env.local`:
-```
-NEXT_PUBLIC_RESEND_API_KEY=your_key_here
-```
-
-3. Update [`app/api/contact/route.ts`](app/api/contact/route.ts):
-```typescript
+```ts
 import { Resend } from 'resend'
-
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
-
-export async function POST(request: NextRequest) {
-  const { name, email, message } = await request.json()
-  
-  const { data, error } = await resend.emails.send({
-    from: 'noreply@yourdomain.com',
-    to: 'your@email.com',
-    subject: `New message from ${name}`,
-    html: `<p>From: ${name} (${email})</p><p>${message}</p>`,
-  })
-  
-  return NextResponse.json({ success: !error })
-}
+const resend = new Resend(process.env.RESEND_API_KEY)
+// inside POST, after validation:
+await resend.emails.send({
+  from: 'noreply@yourdomain.com',
+  to: 'shahzad.farza@gmail.com',
+  subject: `New message from ${name}`,
+  html: `<p>From: ${name} (${email})</p><p>${message}</p>`,
+})
 ```
 
-#### Option B: EmailJS
-```bash
-npm install @emailjs/browser
-```
+Add `RESEND_API_KEY` to `.env.local` (never commit it).
 
-1. Set up account at [emailjs.com](https://emailjs.com)
-2. Get credentials and add to `.env.local`
-3. Update contact form in [`app/contact/page.tsx`](app/contact/page.tsx)
+## Deployment
 
-## 📦 Build & Deploy
-
-### Build for Production
-```bash
-npm run build
-npm start
-```
-
-### Deploy to Vercel (Recommended)
-
-1. **Connect GitHub repository**
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
-
-2. **Deploy on Vercel**
-   - Visit [vercel.com](https://vercel.com)
-   - Import project from GitHub
-   - Add environment variables
-   - Deploy with one click
-
-### Deploy to Other Platforms
-
-**Netlify:**
-```bash
-npm install -g netlify-cli
-netlify deploy --prod
-```
-
-**Docker:**
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY .next ./next
-EXPOSE 3000
-CMD ["npm", "start"]
-```
-
-## 🔧 Configuration
-
-### SEO Settings
-
-Edit metadata in [`app/layout.tsx`](app/layout.tsx#L7):
-```typescript
-export const metadata: Metadata = {
-  title: 'Your Name | Portfolio',
-  description: 'Your professional description',
-  metadataBase: new URL('https://yourdomain.com'),
-}
-```
-
-### Analytics
-
-Already integrated with Vercel Analytics. Configure in [`app/layout.tsx`](app/layout.tsx#L38).
-
-## 🎯 Performance Tips
-
-- ✅ Images: Use Next.js `Image` component for optimization
-- ✅ Lazy loading: Already configured for sections
-- ✅ Font optimization: Uses system fonts
-- ✅ Code splitting: Automatic with Next.js
-
-Target: **Lighthouse 90+**
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## 🛠️ Tech Stack
-
-| Technology | Purpose |
-|-----------|---------|
-| **Next.js 14** | React framework & routing |
-| **React 18** | UI library |
-| **Tailwind CSS** | Styling |
-| **Framer Motion** | Animations |
-| **TypeScript** | Type safety |
-| **Vercel** | Hosting & analytics |
-| **Resend/EmailJS** | Email delivery |
-
-## 📝 License
-
-This project is open source and available under the MIT License.
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork and submit pull requests.
-
-## 📚 Resources
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Framer Motion](https://www.framer.com/motion/)
-- [Vercel Deployment](https://vercel.com/docs)
-
-## ❓ Troubleshooting
-
-### Contact form not working?
-- Check `.env.local` has correct API keys
-- Verify email service credentials
-- Check browser console for errors
-
-### Build fails?
-```bash
-rm -rf .next node_modules
-npm install
-npm run build
-```
-
-### Styles not loading?
-```bash
-npm install -D tailwindcss
-npm run dev
-```
-
-## 🎓 Next Steps
-
-1. ✅ Customize content with your information
-2. ✅ Set up email functionality
-3. ✅ Add your CV file
-4. ✅ Test on mobile devices
-5. ✅ Deploy to Vercel
-6. ✅ Monitor with Vercel Analytics
-7. ✅ Get feedback and iterate
+Optimized for **Vercel**: push to GitHub, import the repo at [vercel.com](https://vercel.com), add any env vars, and deploy. Analytics is already wired via `@vercel/analytics`.
 
 ---
 
-**Made with ❤️ using Next.js, Tailwind CSS, and Framer Motion**
+Built by **Farza Shahzad** — Flutter developer & hardware integrator, Peshawar, PK.
