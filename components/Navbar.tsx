@@ -1,91 +1,117 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { motion } from 'framer-motion'
-import { HiArrowDownTray } from 'react-icons/hi2'
+import React, { useEffect, useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
-const Navbar = () => {
-  const pathname = usePathname()
-  const [isScrolled, setIsScrolled] = useState(false)
+const links = [
+  { num: '01', label: 'About', href: '#about' },
+  { num: '02', label: 'Skills', href: '#skills' },
+  { num: '03', label: 'Work', href: '#experience' },
+  { num: '04', label: 'Projects', href: '#projects' },
+  { num: '05', label: 'Contact', href: '#contact' },
+]
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false)
+  const [active, setActive] = useState('#about')
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+    const onScroll = () => {
+      const sections = links.map((l) => l.href.slice(1))
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i])
+        if (el && el.getBoundingClientRect().top <= 140) {
+          setActive('#' + sections[i])
+          break
+        }
+      }
     }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/skills', label: 'Skills' },
-    { href: '/experience', label: 'Experience' },
-    { href: '/projects', label: 'Projects' },
-    { href: '/contact', label: 'Contact' },
-  ]
-
   return (
-    <motion.nav
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-dark-900/80 backdrop-blur-md shadow-lg border-b border-dark-200/10'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo/Initials */}
-        <Link href="/">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
-          >
-            {'<Farza Shahzad />'}
-          </motion.div>
-        </Link>
+    <header className="fixed top-0 inset-x-0 z-50 bg-paper border-b border-ink">
+      <nav className="mx-auto max-w-6xl px-5 sm:px-8 h-14 flex items-center justify-between">
+        <a href="#home" className="label font-bold text-ink">
+          Farza Shahzad<span className="text-accent">®</span>
+        </a>
 
-        {/* Nav Links - Desktop */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <motion.div
-                whileHover={{ y: -2 }}
-                className={`text-sm font-medium transition-colors ${
-                  pathname === link.href
-                    ? 'text-blue-400'
-                    : 'text-dark-200 hover:text-dark-50'
+        <ul className="hidden md:flex items-center gap-7">
+          {links.map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                className={`label inline-flex items-center gap-1.5 transition-colors ${
+                  active === l.href ? 'text-accent' : 'text-ink/60 hover:text-ink'
                 }`}
               >
-                {link.label}
-              </motion.div>
-            </Link>
+                <span className="opacity-50">{l.num}</span>
+                {l.label}
+              </a>
+            </li>
           ))}
+        </ul>
+
+        <div className="hidden md:flex items-center gap-4">
+          <span className="label flex items-center gap-1.5 text-ink/60">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Available
+          </span>
+          <a
+            href="/Farza_Shahzad_CV.pdf"
+            download
+            className="label border border-ink px-3 py-1.5 text-ink hover:bg-ink hover:text-paper transition-colors"
+          >
+            CV ↗
+          </a>
         </div>
 
-        {/* Download CV Button */}
-        <motion.a
-          href="/Farza_Shahzad_CV.pdf"
-          download
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="hidden sm:flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-sm font-medium transition-colors"
+        <button
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          onClick={() => setOpen((v) => !v)}
+          className="md:hidden p-1 text-ink"
         >
-          <HiArrowDownTray size={16} />
-          <span>CV</span>
-        </motion.a>
+          {open ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </nav>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          {/* Add mobile menu toggle here if needed */}
-        </div>
-      </div>
-    </motion.nav>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="md:hidden fixed inset-0 top-14 bg-paper"
+          >
+            <ul className="flex flex-col">
+              {links.map((l) => (
+                <li key={l.href} className="border-b border-ink/20">
+                  <a
+                    href={l.href}
+                    onClick={() => setOpen(false)}
+                    className="display text-4xl flex items-baseline gap-3 px-5 py-4 text-ink hover:bg-ink hover:text-paper transition-colors"
+                  >
+                    <span className="label text-accent">{l.num}</span>
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+              <li className="p-5">
+                <a
+                  href="/Farza_Shahzad_CV.pdf"
+                  download
+                  className="label border border-ink inline-block px-4 py-2 text-ink"
+                >
+                  Download CV ↗
+                </a>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   )
 }
-
-export default Navbar

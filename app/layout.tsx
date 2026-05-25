@@ -5,13 +5,15 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Farza Shahzad | Flutter Developer & Hardware Integrator',
-  description: 'Portfolio of Farza Shahzad - App developer skilled in Flutter, Firebase, Bluetooth communication, and IoT solutions',
+  title: 'Farza Shahzad — Flutter Developer & Hardware Integrator',
+  description:
+    'Portfolio of Farza Shahzad — App developer skilled in Flutter, Firebase, Bluetooth communication, and IoT solutions',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'Farza Shahzad | Flutter Developer & Hardware Integrator',
-    description: 'Portfolio of Farza Shahzad - App developer skilled in Flutter, Firebase, Bluetooth communication, and IoT solutions',
+    title: 'Farza Shahzad — Flutter Developer & Hardware Integrator',
+    description:
+      'Portfolio of Farza Shahzad — App developer skilled in Flutter, Firebase, Bluetooth communication, and IoT solutions',
   },
 }
 
@@ -22,11 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-dark-900 text-dark-50 overflow-x-hidden">
+      <body className="min-h-screen w-full bg-paper text-ink antialiased">
         <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
         <Analytics />
       </body>

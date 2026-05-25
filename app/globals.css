@@ -8,42 +8,73 @@
   box-sizing: border-box;
 }
 
+:root {
+  --paper: #e9e5db;
+  --ink: #14130f;
+}
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 3.5rem;
+  background-color: var(--paper);
 }
 
 body {
-  background: linear-gradient(135deg, #0a0a0a 0%, #0d0d0d 100%);
-  color: #f5f5f5;
-  font-family: 'Inter', sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-/* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--paper); }
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
-  border-radius: 4px;
+  background: var(--ink);
+  border: 3px solid var(--paper);
+  border-radius: 0;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #1e40af;
+::selection {
+  background: var(--ink);
+  color: var(--paper);
 }
+
+/* Display type: tight, heavy, editorial */
+.display {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+/* Fluid hero scale */
+.display-xl {
+  font-size: clamp(2.75rem, 9vw, 6.5rem);
+}
+
+/* Mono label */
+.label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Running ticker (used sparingly as a divider band) */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-ticker { animation: ticker 30s linear infinite; }
