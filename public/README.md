@@ -1,9 +1,5 @@
 # Portfolio public assets
 
-Place your static files here:
-- CV: `cv.pdf`
-- Profile image: `profile.jpg`
-- Project images: `projects/`
-- OG image: `og-image.png`
-
-This folder is served at the root of your site.
+Static files served at the root of the site:
+- CV: `Farza_Shahzad_CV.pdf` (linked from the navbar)
+- Profile image: `FarzaShahzad.jpg` (used in the hero)

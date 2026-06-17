@@ -4,7 +4,7 @@ A personal portfolio site with a **brutalist-editorial** aesthetic: a light "pap
 
 Built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion.
 
-🔗 **Live:** [farzashahzad.vercel.app](https://farzashahzad.vercel.app) <!-- update if the domain differs -->
+🔗 **Live:** [farza-shahzad.vercel.app](https://farza-shahzad.vercel.app) <!-- update if the domain differs -->
 
 ## Overview
 
@@ -16,8 +16,8 @@ A single-page site composed of stacked sections:
 | 01 | **About** | Editorial lead paragraph + hard-ruled stat grid |
 | 02 | **Skills** | Capability pillars + "other tools" tag set |
 | 03 | **Experience** | Career index list with hover-invert rows, plus education & leadership |
-| 04 | **Projects** | Filterable index list (All / Flutter / Side Projects) |
-| 05 | **Contact** | Contact details + form posting to `/api/contact` |
+| 04 | **Projects** | Filterable index list (All / Flutter / Full Stack / Side Quests) |
+| 05 | **Contact** | Direct-contact links — WhatsApp, email, LinkedIn, GitHub (pre-filled) |
 
 The `/skills`, `/experience`, `/projects`, and `/contact` routes are thin redirects to the matching anchors on the homepage, so deep links keep working.
 
@@ -31,7 +31,6 @@ The `/skills`, `/experience`, `/projects`, and `/contact` routes are thin redire
 | **Tailwind CSS** | Styling (design tokens in `tailwind.config.js`) |
 | **Framer Motion** | Scroll / reveal animations |
 | **Vercel Analytics** | Traffic insights |
-| **Resend** | Email delivery (ready to wire into the contact API) |
 
 ## Getting Started
 
@@ -61,7 +60,6 @@ portfolioWebsite/
 │   ├── layout.tsx            # Root layout (Navbar, Footer, Analytics)
 │   ├── page.tsx              # Home — composes all sections
 │   ├── globals.css           # Theme tokens, display type, utilities
-│   ├── api/contact/route.ts  # Contact form endpoint (stub, ready for email provider)
 │   ├── skills/page.tsx       # → redirect to /#skills
 │   ├── experience/page.tsx   # → redirect to /#experience
 │   ├── projects/page.tsx     # → redirect to /#projects
@@ -73,7 +71,7 @@ portfolioWebsite/
 │   ├── Skills.tsx            # Skill pillars + tools
 │   ├── Experience.tsx        # Career timeline / index
 │   ├── Projects.tsx          # Filterable project index
-│   ├── Contact.tsx           # Contact section + form
+│   ├── Contact.tsx           # Contact section — direct-contact links
 │   ├── SectionHeading.tsx    # Shared numbered section header
 │   └── Footer.tsx            # Footer wordmark + links
 ├── data/
@@ -116,28 +114,18 @@ colors: {
 
 Change `accent` to re-skin the whole site in one line. Display type, the section rules, and shared utilities live in [`app/globals.css`](app/globals.css).
 
-## Contact Form
+## Contact
 
-The form in the Contact section POSTs to [`app/api/contact/route.ts`](app/api/contact/route.ts), which currently validates input and logs the submission. To actually deliver email, wire in [Resend](https://resend.com) (already a dependency):
-
-```ts
-import { Resend } from 'resend'
-const resend = new Resend(process.env.RESEND_API_KEY)
-// inside POST, after validation:
-await resend.emails.send({
-  from: 'noreply@yourdomain.com',
-  to: 'shahzad.farza@gmail.com',
-  subject: `New message from ${name}`,
-  html: `<p>From: ${name} (${email})</p><p>${message}</p>`,
-})
-```
-
-Add `RESEND_API_KEY` to `.env.local` (never commit it).
+The Contact section ([`components/Contact.tsx`](components/Contact.tsx)) is a set of
+direct-contact links — no form, no backend. WhatsApp (`wa.me`) and email (`mailto:`)
+open with a pre-filled message/subject; LinkedIn and GitHub link to the profiles.
+Update the `PHONE`, `EMAIL`, and `contactInfo` constants at the top of the file to
+change them.
 
 ## Deployment
 
-Optimized for **Vercel**: push to GitHub, import the repo at [vercel.com](https://vercel.com), add any env vars, and deploy. Analytics is already wired via `@vercel/analytics`.
+Optimized for **Vercel**: push to GitHub, import the repo at [vercel.com](https://vercel.com), and deploy — no env vars required. Analytics is already wired via `@vercel/analytics`.
 
 ---
 
-Built by **Farza Shahzad** — Flutter developer & hardware integrator, Peshawar, PK.
+Built by **Farza Shahzad** — Flutter & full-stack developer, Peshawar, PK.
