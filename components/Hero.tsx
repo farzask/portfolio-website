@@ -29,7 +29,7 @@ export default function Hero() {
       >
         <div className="mx-auto max-w-6xl px-5 sm:px-8 py-3 flex items-center justify-between label text-ink/70">
           <span>Portfolio — &rsquo;26</span>
-          <span className="hidden sm:block">Flutter Dev / IoT Builder / Full-Stack</span>
+          <span className="hidden sm:block">Flutter &amp; Full-Stack Developer</span>
           <span>Peshawar, PK</span>
         </div>
       </motion.div>
@@ -66,8 +66,8 @@ export default function Hero() {
               className="mt-6 lg:mt-8"
             >
               <p className="text-lg sm:text-xl font-medium tracking-tight leading-[1.3] max-w-xl">
-                Flutter developer &amp; hardware integrator building thoughtful
-                mobile &amp; IoT experiences — somewhere between{' '}
+                Flutter &amp; full-stack developer building thoughtful
+                mobile and web experiences — somewhere between{' '}
                 <span className="text-accent">code and curiosity.</span>
               </p>
 
@@ -122,7 +122,7 @@ export default function Hero() {
         <div className="flex whitespace-nowrap animate-ticker">
           {Array.from({ length: 2 }).map((_, dup) => (
             <div key={dup} className="flex shrink-0 items-center label text-ink py-3" aria-hidden={dup === 1}>
-              {['Flutter', 'Firebase', 'BLE / IoT', 'ESP32', 'Dart', 'React', 'TypeScript', 'Python', 'Figma'].map((t) => (
+              {['Flutter', 'Firebase', 'Supabase', 'Next.js', 'BLE / IoT', 'ESP32', 'Dart', 'React', 'TypeScript', 'Python', 'Figma'].map((t) => (
                 <span key={t} className="flex items-center">
                   <span className="px-6">{t}</span>
                   <span className="text-accent">✳</span>

@@ -30,7 +30,7 @@ export default function About() {
             <span className="underline decoration-accent decoration-2 underline-offset-4">
               building things that ship
             </span>{' '}
-            — from Flutter apps with 50+ users to BLE-connected hardware. I care
+            — from Flutter apps with 50+ users to full-stack web products. I care
             about clean architecture, calm interfaces, and the details that make
             software feel trustworthy.
           </motion.p>

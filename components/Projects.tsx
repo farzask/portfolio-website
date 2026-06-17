@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { projects } from '../data/portfolio'
 import SectionHeading from './SectionHeading'
 
-const filters = ['All', 'Flutter', 'Side Projects'] as const
+const filters = ['All', 'Flutter', 'Full Stack', 'Side Quests'] as const
 type Filter = (typeof filters)[number]
 
 export default function Projects() {

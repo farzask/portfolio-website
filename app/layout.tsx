@@ -5,15 +5,15 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Farza Shahzad — Flutter Developer & Hardware Integrator',
+  title: 'Farza Shahzad — Full Stack Developer',
   description:
-    'Portfolio of Farza Shahzad — App developer skilled in Flutter, Firebase, Bluetooth communication, and IoT solutions',
+    'Portfolio of Farza Shahzad — Full Stack Developer skilled in React, Node.js, Python, Flutter and cloud technologies with integrations with IoT solutions',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'Farza Shahzad — Flutter Developer & Hardware Integrator',
+    title: 'Farza Shahzad — Full Stack Developer',
     description:
-      'Portfolio of Farza Shahzad — App developer skilled in Flutter, Firebase, Bluetooth communication, and IoT solutions',
+      'Portfolio of Farza Shahzad — Full Stack Developer skilled in React, Node.js, Python, Flutter and cloud technologies with integrations with IoT solutions',
   },
 }
 
