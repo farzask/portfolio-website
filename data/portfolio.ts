@@ -14,12 +14,6 @@ export type ExperienceItem = {
   tech: string[]
 }
 
-export const stats = [
-  { label: 'CGPA', value: '4.0', suffix: '' },
-  { label: 'Projects Built', value: '8', suffix: '+' },
-  { label: 'Work Experiences', value: '5', suffix: '+' },
-]
-
 export const skillPillars = [
   {
     title: 'App Development',
@@ -264,4 +258,10 @@ export const projects: Project[] = [
     category: 'Side Quests',
     github: 'https://github.com/farzask/quran-app',
   },
+]
+
+export const stats = [
+  { label: 'CGPA', value: '4.0', suffix: '' },
+  { label: 'Projects Built', value: String(projects.length), suffix: '+' },
+  { label: 'Work Experiences', value: String(experiences.length), suffix: '+' },
 ]
