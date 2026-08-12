@@ -8,9 +8,9 @@ const PHONE = '923468222882'
 const EMAIL = 'shahzad.farza@gmail.com'
 
 const waText = encodeURIComponent(
-  'Hi Farza, I came across your portfolio and wanted to reach out —'
+  'Hi Farza, I came across your portfolio and wanted to reach out'
 )
-const mailSubject = encodeURIComponent('Hi Farza — from your portfolio')
+const mailSubject = encodeURIComponent('Hi Farza from your portfolio')
 const mailBody = encodeURIComponent(
   'Hi Farza,\n\nI came across your portfolio and wanted to reach out about '
 )
@@ -34,7 +34,7 @@ export default function Contact() {
         <div className="mt-14 max-w-3xl">
           <p className="text-lg sm:text-xl font-medium tracking-tight max-w-md">
             Got a project, a role, or just want to say hi? Pick whatever&apos;s
-            easiest — I read everything.
+            easiest. I read everything.
           </p>
 
           <motion.div

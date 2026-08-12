@@ -128,4 +128,4 @@ Optimized for **Vercel**: push to GitHub, import the repo at [vercel.com](https:
 
 ---
 
-Built by **Farza Shahzad** — Flutter & full-stack developer, Peshawar, PK.
+Built by **Farza Shahzad** Flutter & full-stack developer, Pakistan.

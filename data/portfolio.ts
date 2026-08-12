@@ -53,7 +53,7 @@ export const skillPillars = [
     skills: [
       'ESP32',
       'BLE / Bluetooth',
-      'Sensor Integration',
+      'Sensors Integration',
     ],
   },
 ]
@@ -88,7 +88,7 @@ export const experiences: ExperienceItem[] = [
   {
     role: 'Full Stack Development Intern',
     company: 'CDGAI, CECOS University',
-    date: 'Apr 2026 — Present',
+    date: 'Apr 2026 - Present',
     bullets: [
       'Built and deployed full stack web apps including a dynamic CECOS Admission Portal.',
       'Collaborating with cross-functional teams to design scalable solutions and optimize performance.',
@@ -158,14 +158,14 @@ export const volunteer = [
   {
     role: 'Campus Director',
     org: 'Zindigi Prize CECOS',
-    date: '2024 — Present',
+    date: '2024 — 2026',
   },
   {
     role: 'Vice President',
     org: 'CECOS International Mathematical Union',
     date: '2023 — 2024',
   },
-  { role: 'Event Lead', org: 'University Tech Society', date: '2022 — 2023' },
+  { role: 'Event Lead', org: 'DigTech 2026', date: 'June 2026 - July 2026' },
 ]
 
 export const projects: Project[] = [
@@ -220,7 +220,7 @@ export const projects: Project[] = [
   {
     name: 'Portfolio Site',
     description:
-      'This very site — built with React, Tailwind, and Framer Motion.',
+      'This very site built with React, Tailwind, and Framer Motion.',
     tech: ['React', 'Tailwind', 'Framer Motion'],
     category: 'Full Stack',
     github: 'https://farza-shahzad.vercel.app/',

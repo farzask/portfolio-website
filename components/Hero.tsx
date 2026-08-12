@@ -28,9 +28,9 @@ export default function Hero() {
         className="border-b border-ink"
       >
         <div className="mx-auto max-w-6xl px-5 sm:px-8 py-3 flex items-center justify-between label text-ink/70">
-          <span>Portfolio — &rsquo;26</span>
+          <span>Portfolio &rsquo;26</span>
           <span className="hidden sm:block">Flutter &amp; Full-Stack Developer</span>
-          <span>Peshawar, PK</span>
+          <span>Pakistan</span>
         </div>
       </motion.div>
 
@@ -67,7 +67,7 @@ export default function Hero() {
             >
               <p className="text-lg sm:text-xl font-medium tracking-tight leading-[1.3] max-w-xl">
                 Flutter &amp; full-stack developer building thoughtful
-                mobile and web experiences — somewhere between{' '}
+                mobile and web experiences somewhere between{' '}
                 <span className="text-accent">code and curiosity.</span>
               </p>
 

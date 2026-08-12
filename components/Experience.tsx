@@ -41,7 +41,7 @@ export default function Experience() {
                   </div>
                   <ul className="mt-3 space-y-1 text-sm text-ink/70 group-hover:text-paper/80 transition-colors max-w-xl">
                     {exp.bullets.map((b) => (
-                      <li key={b}>— {b}</li>
+                      <li key={b}>{b}</li>
                     ))}
                   </ul>
                 </div>

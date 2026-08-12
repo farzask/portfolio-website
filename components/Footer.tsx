@@ -20,7 +20,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-paper/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
           <div className="label text-paper/60">
-            © {new Date().getFullYear()} — Peshawar, PK
+            © {new Date().getFullYear()} Pakistan
           </div>
 
           <div className="flex items-center gap-6">

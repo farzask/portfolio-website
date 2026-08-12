@@ -11,7 +11,7 @@ type Props = {
 }
 
 /**
- * Brutalist section header: (NN) ———— LABEL  then a large display title.
+ * Brutalist section header: (NN) ------ LABEL  then a large display title.
  */
 export default function SectionHeading({ index, eyebrow, children, className = '' }: Props) {
   return (
