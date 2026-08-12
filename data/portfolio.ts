@@ -171,7 +171,7 @@ export const projects: Project[] = [
     github: 'https://admissions.cecos.edu.pk/',
   },
   {
-    name: 'Forge — Multi-Agent AI App Builder',
+    name: 'Forge, Multi-Agent AI App Builder',
     description:
       'In-browser multi-agent system that generates working apps from natural language, coordinating five agents (Clarifier, Designer, Data Agent, Builder, Verifier) with a self-healing loop that detects and repairs build failures autonomously. Built at the CMPO x CDGAI Agentic Hackathon.',
     tech: ['Next.js', 'TypeScript', 'Multi-Agent Systems', 'LLM'],
