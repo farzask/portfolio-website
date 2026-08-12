@@ -192,7 +192,7 @@ export const projects: Project[] = [
       'IoT water quality monitoring app with real-time sensor dashboards, Streamlit analytics, and Gemini API alerts.',
     tech: ['Flutter', 'Firebase', 'ESP32', 'Streamlit', 'Gemini API'],
     category: 'Flutter',
-    github: 'https://github.com/farzask',
+    github: 'https://github.com/farzask/aqua-sentinel',
   },
   {
     name: 'Tap to Care',
@@ -200,7 +200,7 @@ export const projects: Project[] = [
       'Bluetooth-enabled sanitary pad dispenser with fingerprint authentication and a companion Flutter control app.',
     tech: ['Flutter', 'BLE', 'Arduino', 'Fingerprint'],
     category: 'Flutter',
-    github: 'https://github.com/farzask',
+    github: 'https://github.com/farzask/dispenser-app',
   },
   {
     name: 'TOOP Certificate Generator and Verification Portal',
@@ -216,7 +216,7 @@ export const projects: Project[] = [
       'Image authentication app that captures and authenticates images. 50+ active users.',
     tech: ['Flutter', 'Firebase', 'REST APIs'],
     category: 'Flutter',
-    github: 'https://github.com/farzask',
+    github: 'https://github.com/farzask/dna-gen-app',
   },
   {
     name: 'Home Automation System',
