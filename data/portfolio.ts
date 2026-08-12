@@ -18,7 +18,6 @@ export const stats = [
   { label: 'CGPA', value: '4.0', suffix: '' },
   { label: 'Projects Built', value: '8', suffix: '+' },
   { label: 'Work Experiences', value: '5', suffix: '+' },
-  { label: 'Customers Reached', value: '1000', suffix: '+' },
 ]
 
 export const skillPillars = [
@@ -178,9 +177,17 @@ export const projects: Project[] = [
     github: 'https://admissions.cecos.edu.pk/',
   },
   {
-    name: 'Hunar Storee Landing Page',
+    name: 'Forge — Multi-Agent AI App Builder',
     description:
-      'A landing page for Hunar Storee, a Charsadda based Vocational Training Center for women, built with Next.js and Tailwind CSS.',
+      'In-browser multi-agent system that generates working apps from natural language, coordinating five agents (Clarifier, Designer, Data Agent, Builder, Verifier) with a self-healing loop that detects and repairs build failures autonomously. Built at the CMPO x CDGAI Agentic Hackathon.',
+    tech: ['Next.js', 'TypeScript', 'Multi-Agent Systems', 'LLM'],
+    category: 'Full Stack',
+    github: 'https://github.com/farzask',
+  },
+  {
+    name: 'Hunar Stori Landing Page',
+    description:
+      'A landing page for Hunar Stori, a Charsadda based Vocational Training Center for women, built with Next.js and Tailwind CSS.',
     tech: ['Next.js', 'Tailwind CSS'],
     category: 'Full Stack',
     github: 'https://hunar-storee.vercel.app/',
@@ -200,6 +207,14 @@ export const projects: Project[] = [
     tech: ['Flutter', 'BLE', 'Arduino', 'Fingerprint'],
     category: 'Flutter',
     github: 'https://github.com/farzask',
+  },
+  {
+    name: 'TOOP Certificate Generator and Verification Portal',
+    description:
+      'Secure certificate admin portal built for Devthon Hackathon (TOOP) — generates themed certificates with live preview and PDF export, supports CSV-driven batch generation, and pairs with a verification portal that authenticates each certificate via its unique ID and embedded QR code.',
+    tech: ['Next.js', 'Tailwind CSS', 'Local Storage', 'CSV Parsing', 'PDF Generation'],
+    category: 'Full Stack',
+    github: 'https://toop-certificate-generator.vercel.app/',
   },
   {
     name: 'DNA Gen',

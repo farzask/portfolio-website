@@ -26,7 +26,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-8 text-lg sm:text-xl font-medium tracking-tight leading-[1.4]"
           >
-            I&apos;m a final-year CS student at CECOS University with a bias for{' '}
+            I&apos;m a CS graduate from CECOS University with a bias for{' '}
             <span className="underline decoration-accent decoration-2 underline-offset-4">
               building things that ship
             </span>{' '}
@@ -42,7 +42,7 @@ export default function About() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="mt-16 border-t border-l border-ink grid grid-cols-2 md:grid-cols-4"
+          className="mt-16 border-t border-l border-ink grid grid-cols-3"
         >
           {stats.map((s) => (
             <div
