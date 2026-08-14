@@ -1,20 +1,76 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
+const SITE_URL = 'https://farza-shahzad.vercel.app'
+const TITLE = 'Farza Shahzad — Full Stack Developer'
+const DESCRIPTION =
+  'Portfolio of Farza Shahzad, a full stack developer building Flutter apps and full-stack web products with React, Next.js, Node.js, Python, and IoT integrations.'
+
 export const metadata: Metadata = {
-  title: 'Farza Shahzad Full Stack Developer',
-  description:
-    'Portfolio of Farza Shahzad Full Stack Developer skilled in React, Node.js, Python, Flutter and cloud technologies with integrations with IoT solutions',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: '%s | Farza Shahzad',
+  },
+  description: DESCRIPTION,
+  keywords: [
+    'Farza Shahzad',
+    'Full Stack Developer',
+    'Flutter Developer',
+    'Next.js',
+    'React',
+    'TypeScript',
+    'IoT Developer',
+    'Peshawar',
+    'Pakistan',
+  ],
+  authors: [{ name: 'Farza Shahzad', url: SITE_URL }],
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'Farza Shahzad Full Stack Developer',
-    description:
-      'Portfolio of Farza Shahzad Full Stack Developer skilled in React, Node.js, Python, Flutter and cloud technologies with integrations with IoT solutions',
+    url: SITE_URL,
+    siteName: 'Farza Shahzad',
+    title: TITLE,
+    description: DESCRIPTION,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#e9e5db',
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Farza Shahzad',
+  url: SITE_URL,
+  jobTitle: 'Full Stack Developer',
+  sameAs: ['https://www.linkedin.com/in/farza-shahzad/', 'https://github.com/farzask'],
+  knowsAbout: [
+    'Flutter',
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Node.js',
+    'Python',
+    'IoT',
+    'ESP32',
+  ],
 }
 
 export default function RootLayout({
@@ -25,6 +81,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen w-full bg-paper text-ink antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />
