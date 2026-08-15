@@ -76,7 +76,7 @@ portfolioWebsite/
 │   ├── Projects.tsx          # Filterable project index
 │   ├── Contact.tsx           # Contact section — direct-contact links
 │   ├── SectionHeading.tsx    # Shared numbered section header
-│   └── Footer.tsx            # Footer wordmark + links
+│   ├── Footer.tsx            # Footer wordmark + links
 │   └── SiteChrome.tsx        # Hides navbar/footer on the /keystatic admin routes
 ├── content/                  # Editable content (JSON, managed by Keystatic)
 │   ├── projects.json
@@ -110,9 +110,10 @@ Saves write plain JSON to [`content/`](content/), which you commit like any othe
 The three headline numbers in About are derived automatically — project and experience
 counts come from the list lengths, so they never go stale.
 
-On the deployed site, `/keystatic` runs in GitHub mode: log in with GitHub and your edits
-become commits to this repo, which triggers a Vercel redeploy. See
-[CMS setup](#cms-setup) for the one-time configuration.
+By default `/keystatic` on the deployed site is inert — Vercel's filesystem doesn't
+persist between requests, so there's nothing to edit until you switch it to GitHub mode:
+log in with GitHub and your edits become commits to this repo, which triggers a Vercel
+redeploy. See [CMS setup](#cms-setup) for the one-time configuration.
 
 Other quick edits (still hardcoded in components):
 
@@ -179,7 +180,7 @@ admin UI does when you hit save.
 
 ## Deployment
 
-Optimized for **Vercel**: push to GitHub, import the repo at [vercel.com](https://vercel.com), and deploy. Analytics is already wired via `@vercel/analytics`. The four Keystatic variables above are the only env vars needed, and only for editing from the live site.
+Optimized for **Vercel**: push to GitHub, import the repo at [vercel.com](https://vercel.com), and deploy — no env vars required, the build succeeds as-is. Analytics is already wired via `@vercel/analytics`. The five Keystatic variables from [CMS setup](#cms-setup) are only needed if you want to edit content from the live site.
 
 ---
 
