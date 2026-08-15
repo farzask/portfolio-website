@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import SiteChrome from '@/components/SiteChrome'
 
 const SITE_URL = 'https://farza-shahzad.vercel.app'
 const TITLE = 'Farza Shahzad — Full Stack Developer'
@@ -85,9 +86,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Navbar />
+        <SiteChrome>
+          <Navbar />
+        </SiteChrome>
         <main>{children}</main>
-        <Footer />
+        <SiteChrome>
+          <Footer />
+        </SiteChrome>
         <Analytics />
       </body>
     </html>

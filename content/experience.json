@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "role": "Full Stack Development Intern",
+      "company": "CDGAI, CECOS University",
+      "date": "Apr 2026 - Present",
+      "bullets": [
+        "Built and deployed full stack web apps including a dynamic CECOS Admission Portal.",
+        "Collaborating with cross-functional teams to design scalable solutions and optimize performance."
+      ],
+      "tech": ["Next.js", "PostgreSQL", "REST APIs", "Flutter"]
+    },
+    {
+      "role": "IoT Course Consultant",
+      "company": "NAVTTC & British Council",
+      "date": "Jan 12–16, 2026",
+      "bullets": [
+        "Participated as a Flutter developer with IoT integration experience",
+        "Helped in designing and delivering IoT curriculum with Flutter Integration for a nationwide training cohort"
+      ],
+      "tech": ["Flutter", "Arduino", "ESP32", "Curriculum Design"]
+    },
+    {
+      "role": "Freelance Flutter Developer",
+      "company": "Self-employed",
+      "date": "2025 — Present",
+      "bullets": [
+        "Shipped production Flutter apps to 50+ active monthly users",
+        "Handled end-to-end delivery: design, development, deployment, support"
+      ],
+      "tech": ["Flutter", "Firebase", "BLE", "REST APIs"]
+    },
+    {
+      "role": "App & Hardware Integration Intern",
+      "company": "ASTechSolutions, NIC Peshawar",
+      "date": "Aug 2025 — Oct 2025",
+      "bullets": [
+        "Built Flutter companion app for a Bluetooth-enabled hardware product",
+        "Implemented BLE communication layer and OTA firmware update flow"
+      ],
+      "tech": ["Flutter", "BLE", "ESP32", "Dart"]
+    },
+    {
+      "role": "Business Development Manager",
+      "company": "Nebula X",
+      "date": "Aug 2023 — Nov 2024",
+      "bullets": [
+        "Bidded for assigned freelancer and agency projects on Upwork, converting $100+ projects"
+      ],
+      "tech": ["Strategy", "Sales", "Bidding", "Upwork", "Proposal Writing"]
+    },
+    {
+      "role": "Founder",
+      "company": "Pocket Sized Stories",
+      "date": "Oct 2020 — Present",
+      "bullets": [
+        "Ran independent e-commerce art and craft store reaching 1000+ customers",
+        "Sold custimized polaroids, stickers, frames, and more through Instagram and WhatsApp",
+        "Managed inventory, marketing, fulfillment, and customer support"
+      ],
+      "tech": ["E-commerce", "Marketing", "Operations", "Adobe Illustrator", "Canva"]
+    }
+  ]
+}

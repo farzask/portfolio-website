@@ -2,10 +2,18 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { experiences, education, volunteer } from '../data/portfolio'
+import type { Education, ExperienceItem, VolunteerItem } from '../lib/content'
 import SectionHeading from './SectionHeading'
 
-export default function Experience() {
+export default function Experience({
+  experiences,
+  education,
+  volunteer,
+}: {
+  experiences: ExperienceItem[]
+  education: Education
+  volunteer: VolunteerItem[]
+}) {
   return (
     <section id="experience" className="relative border-t border-ink">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 lg:py-24">

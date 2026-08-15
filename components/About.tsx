@@ -2,10 +2,10 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { stats } from '../data/portfolio'
+import type { Stat } from '../lib/content'
 import SectionHeading from './SectionHeading'
 
-export default function About() {
+export default function About({ stats }: { stats: Stat[] }) {
   return (
     <section id="about" className="relative border-t border-ink">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 lg:py-24">

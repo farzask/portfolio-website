@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "name": "CECOS Admission Portal",
+      "description": "A dynamic web application for managing admissions at CECOS University, connected with Supabase.",
+      "tech": ["Next.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
+      "category": "Full Stack",
+      "link": "https://admissions.cecos.edu.pk/"
+    },
+    {
+      "name": "Forge, Multi-Agent AI App Builder",
+      "description": "In-browser multi-agent system that generates working apps from natural language, coordinating five agents (Clarifier, Designer, Data Agent, Builder, Verifier) with a self-healing loop that detects and repairs build failures autonomously. Built at the CMPO x CDGAI Agentic Hackathon.",
+      "tech": ["Next.js", "TypeScript", "Multi-Agent Systems", "LLM"],
+      "category": "Full Stack",
+      "link": "https://github.com/farzask"
+    },
+    {
+      "name": "Hunar Stori Landing Page",
+      "description": "A landing page for Hunar Stori, a Charsadda based Vocational Training Center for women, built with Next.js and Tailwind CSS.",
+      "tech": ["Next.js", "Tailwind CSS"],
+      "category": "Full Stack",
+      "link": "https://hunar-storee.vercel.app/"
+    },
+    {
+      "name": "Aqua Sentinel",
+      "description": "IoT water quality monitoring app with real-time sensor dashboards, Streamlit analytics, and Gemini API alerts.",
+      "tech": ["Flutter", "Firebase", "ESP32", "Streamlit", "Gemini API"],
+      "category": "Flutter",
+      "link": "https://github.com/farzask/aqua-sentinel"
+    },
+    {
+      "name": "Tap to Care",
+      "description": "Bluetooth-enabled sanitary pad dispenser with fingerprint authentication and a companion Flutter control app.",
+      "tech": ["Flutter", "BLE", "Arduino", "Fingerprint"],
+      "category": "Flutter",
+      "link": "https://github.com/farzask/dispenser-app"
+    },
+    {
+      "name": "TOOP Certificate Generator and Verification Portal",
+      "description": "Secure certificate admin portal built for Devthon Hackathon (TOOP) — generates themed certificates with live preview and PDF export, supports CSV-driven batch generation, and pairs with a verification portal that authenticates each certificate via its unique ID and embedded QR code.",
+      "tech": ["Next.js", "Tailwind CSS", "Local Storage", "CSV Parsing", "PDF Generation"],
+      "category": "Full Stack",
+      "link": "https://toop-certificate-generator.vercel.app/"
+    },
+    {
+      "name": "DNA Gen",
+      "description": "Image authentication app that captures and authenticates images. 50+ active users.",
+      "tech": ["Flutter", "Firebase", "REST APIs"],
+      "category": "Flutter",
+      "link": "https://github.com/farzask/dna-gen-app"
+    },
+    {
+      "name": "Home Automation System",
+      "description": "Smart home IoT prototype controlling lights, locks, and climate from one app.",
+      "tech": ["Flutter", "ESP32", "MQTT"],
+      "category": "Side Quests",
+      "link": "https://github.com/farzask"
+    },
+    {
+      "name": "Portfolio Site",
+      "description": "This very site built with React, Tailwind, and Framer Motion.",
+      "tech": ["React", "Tailwind", "Framer Motion"],
+      "category": "Full Stack",
+      "link": "https://farza-shahzad.vercel.app/"
+    },
+    {
+      "name": "Python Web Scraper Toolkit",
+      "description": "Python web scraper toolkit for extracting data from around 250 University websites and storing it into a JSON file.",
+      "tech": ["Python", "Selectolax", "Selenium", "JSON"],
+      "category": "Side Quests",
+      "link": "https://github.com/farzask"
+    },
+    {
+      "name": "SAHA (NGO) Website UI Design",
+      "description": "Designed a modern, user friendly website UI for SAHA, a local NGO focused on Sustainability",
+      "tech": ["Figma", "UI/UX", "Design"],
+      "category": "Side Quests",
+      "link": "https://www.figma.com/design/dZLt3eNJf0sTsOtzOvQy6t/SAHA?node-id=0-1&t=CXcWM9i8j8sl2xBG-1"
+    },
+    {
+      "name": "Quran App",
+      "description": "A mobile app for reading to the Quran, in a GenZ style keeping a person hooked to reciting, bookmarks the ayat where you left off, built with Flutter, for personal use.",
+      "tech": ["Flutter", "Firebase"],
+      "category": "Side Quests",
+      "link": "https://github.com/farzask/quran-app"
+    }
+  ]
+}

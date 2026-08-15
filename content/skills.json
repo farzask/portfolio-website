@@ -1,0 +1,69 @@
+{
+  "pillars": [
+    {
+      "title": "App Development",
+      "icon": "Smartphone",
+      "skills": [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Supabase",
+        "REST APIs",
+        "State Management",
+        "Provider"
+      ]
+    },
+    {
+      "title": "Full Stack",
+      "icon": "Code",
+      "skills": [
+        "Next.js",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "React",
+        "TypeScript"
+      ]
+    },
+    {
+      "title": "Hardware & IoT",
+      "icon": "Cpu",
+      "skills": [
+        "ESP32",
+        "BLE / Bluetooth",
+        "Sensors Integration"
+      ]
+    },
+    {
+      "title": "Software Quality",
+      "icon": "Smartphone",
+      "skills": [
+        "Testing"
+      ]
+    }
+  ],
+  "otherTools": [
+    "HTML/CSS",
+    "JavaScript",
+    "Vercel",
+    "Streamlit",
+    "Docker",
+    "Notion",
+    "Git",
+    "GitHub",
+    "Version Control",
+    "Figma",
+    "UI/UX Design",
+    "Agile/Scrum",
+    "Railway",
+    "Python",
+    "Google Colab",
+    "Jupyter Notebooks",
+    "Selenium",
+    "Selectolax",
+    "Scikit-learn",
+    "Matplotlib",
+    "C++",
+    "Arduino",
+    "ESP32"
+  ]
+}

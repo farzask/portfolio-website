@@ -2,19 +2,20 @@
 
 import React, { useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { projects } from '../data/portfolio'
+import { PROJECT_CATEGORIES, type ProjectCategory } from '../lib/categories'
+import type { Project } from '../lib/content'
 import SectionHeading from './SectionHeading'
 
-const filters = ['All', 'Flutter', 'Full Stack', 'Side Quests'] as const
-type Filter = (typeof filters)[number]
+const filters = ['All', ...PROJECT_CATEGORIES] as const
+type Filter = 'All' | ProjectCategory
 
-export default function Projects() {
+export default function Projects({ projects }: { projects: Project[] }) {
   const [active, setActive] = useState<Filter>('All')
 
   const filtered = useMemo(() => {
     if (active === 'All') return projects
     return projects.filter((p) => p.category === active)
-  }, [active])
+  }, [active, projects])
 
   return (
     <section id="projects" className="relative border-t border-ink">
@@ -53,8 +54,8 @@ export default function Projects() {
                 className="group border-b border-ink hover:bg-ink transition-colors"
               >
                 <a
-                  href={p.github || '#'}
-                  target={p.github ? '_blank' : undefined}
+                  href={p.link || '#'}
+                  target={p.link ? '_blank' : undefined}
                   rel="noopener noreferrer"
                   className="block px-1 sm:px-2 py-6 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-baseline"
                 >
