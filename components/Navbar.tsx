@@ -61,7 +61,7 @@ export default function Navbar() {
             Available
           </span>
           <a
-            href="/Farza_Shahzad_CV.pdf"
+            href="FarzaShahzad_Resume_SoftwareDeveloper.pdf"
             download
             className="label border border-ink px-3 py-1.5 text-ink hover:bg-ink hover:text-paper transition-colors"
           >
