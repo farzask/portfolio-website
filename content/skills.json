@@ -10,7 +10,8 @@
         "Supabase",
         "REST APIs",
         "State Management",
-        "Provider"
+        "Provider",
+        "MVVM Architecture"
       ]
     },
     {
@@ -21,7 +22,8 @@
         "Tailwind CSS",
         "PostgreSQL",
         "React",
-        "TypeScript"
+        "TypeScript",
+        "SQL"
       ]
     },
     {
@@ -30,14 +32,20 @@
       "skills": [
         "ESP32",
         "BLE / Bluetooth",
-        "Sensors Integration"
+        "Sensors Integration",
+        "Fingerprint / Biometrics"
       ]
     },
     {
       "title": "Software Quality",
       "icon": "Smartphone",
       "skills": [
-        "Testing"
+        "Manual Testing (Functional, UI, Negative)",
+        "Playwright (Python)",
+        "pytest",
+        "Jira",
+        "Azure DevOps",
+        "Test Case Design"
       ]
     }
   ],
@@ -47,23 +55,38 @@
     "Vercel",
     "Streamlit",
     "Docker",
+    "Docker Compose",
+    "Bash",
+    "Linux (Ubuntu)",
+    "SSH",
     "Notion",
+    "Slack",
     "Git",
     "GitHub",
     "Version Control",
     "Figma",
     "UI/UX Design",
     "Agile/Scrum",
+    "Sprint Planning",
     "Railway",
+    "Cloudinary",
     "Python",
     "Google Colab",
     "Jupyter Notebooks",
     "Selenium",
     "Selectolax",
+    "Pandas",
+    "NumPy",
     "Scikit-learn",
     "Matplotlib",
-    "C++",
+    "Gemini API",
+    "ANN Models",
+    "C/C++",
     "Arduino",
-    "ESP32"
+    "ESP32",
+    "Debugging",
+    "Code Reviews",
+    "Technical Documentation",
+    "Requirements Engineering"
   ]
 }

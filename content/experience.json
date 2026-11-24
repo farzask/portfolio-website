@@ -1,14 +1,46 @@
 {
   "items": [
     {
+      "role": "QA Intern",
+      "company": "Dev Excel IT Solutions, Lahore",
+      "date": "Oct 2026 — Present",
+      "bullets": [
+        "Writing automated test scripts in Python with Playwright and pytest.",
+        "Testing tickets and reported bugs in Jira and Azure DevOps using functional, UI, and negative testing, and creating bug tickets.",
+        "Working in sprints, including sprint planning."
+      ],
+      "tech": ["Playwright", "Python", "pytest", "Jira", "Azure DevOps"]
+    },
+    {
+      "role": "Software Developer Intern",
+      "company": "Zypher Enterprise (Pvt) Ltd, Remote",
+      "date": "Jul 2026 — Sep 2026",
+      "bullets": [
+        "Containerized applications with Dockerfiles and multi-container Docker Compose setups.",
+        "Built a Bash deployment script that verifies each new Docker build before swapping containers, keeping the previous container running if the build fails.",
+        "Deployed to the company's Linux server over SSH and to Vercel, troubleshot failed builds from logs, and maintained deployment documentation."
+      ],
+      "tech": ["Docker", "Docker Compose", "Bash", "Linux", "SSH", "Vercel"]
+    },
+    {
       "role": "Full Stack Development Intern",
       "company": "CDGAI, CECOS University",
-      "date": "Apr 2026 - Present",
+      "date": "Apr 2026 — Jul 2026",
       "bullets": [
-        "Built and deployed full stack web apps including a dynamic CECOS Admission Portal.",
-        "Collaborating with cross-functional teams to design scalable solutions and optimize performance."
+        "Built the CECOS Admission Portal in Next.js on PostgreSQL (Supabase), with application processing, admission tracking, PayPro payment integration, and role-based dashboards for the Admissions and Finance offices.",
+        "Gathered and documented requirements, and supported handover through code reviews and feature documentation."
       ],
-      "tech": ["Next.js", "PostgreSQL", "REST APIs", "Flutter"]
+      "tech": ["Next.js", "PostgreSQL", "Supabase", "REST APIs", "Flutter"]
+    },
+    {
+      "role": "Freelance Flutter Developer",
+      "company": "Remote, Saudi-based startup client",
+      "date": "Jan 2026 — Feb 2026",
+      "bullets": [
+        "Built and shipped a Flutter product-authenticity app that flags counterfeit or tampered products by validating steganographically embedded image metadata.",
+        "Built capture and upload flows calling a Railway-deployed Python backend via REST API, with Cloudinary asset delivery and real-time Firebase sync."
+      ],
+      "tech": ["Flutter", "Firebase", "REST APIs", "Cloudinary", "Railway"]
     },
     {
       "role": "IoT Course Consultant",
@@ -16,36 +48,27 @@
       "date": "Jan 12–16, 2026",
       "bullets": [
         "Participated as a Flutter developer with IoT integration experience",
-        "Helped in designing and delivering IoT curriculum with Flutter Integration for a nationwide training cohort"
+        "Co-designed a national IoT curriculum covering mobile development and hardware integration, adopted for government-backed training"
       ],
       "tech": ["Flutter", "Arduino", "ESP32", "Curriculum Design"]
     },
     {
-      "role": "Freelance Flutter Developer",
-      "company": "Self-employed",
-      "date": "2025 — Present",
-      "bullets": [
-        "Shipped production Flutter apps to 50+ active monthly users",
-        "Handled end-to-end delivery: design, development, deployment, support"
-      ],
-      "tech": ["Flutter", "Firebase", "BLE", "REST APIs"]
-    },
-    {
-      "role": "App & Hardware Integration Intern",
+      "role": "Application Development Intern",
       "company": "ASTechSolutions, NIC Peshawar",
-      "date": "Aug 2025 — Oct 2025",
+      "date": "Jun 2025 — Dec 2025",
       "bullets": [
-        "Built Flutter companion app for a Bluetooth-enabled hardware product",
-        "Implemented BLE communication layer and OTA firmware update flow"
+        "Built Tap to Care, a Flutter app that lets non-technical staff enroll fingerprints for a sanitary pad dispenser, replacing a process that needed code changes for every new user",
+        "Implemented the BLE communication layer for real-time fingerprint capture and an OTA firmware update flow",
+        "Added a Firebase admin panel for user and device management; used by ~50 female staff at NIC Peshawar"
       ],
-      "tech": ["Flutter", "BLE", "ESP32", "Dart"]
+      "tech": ["Flutter", "BLE", "ESP32", "Dart", "Firebase"]
     },
     {
       "role": "Business Development Manager",
       "company": "Nebula X",
-      "date": "Aug 2023 — Nov 2024",
+      "date": "Sep 2023 — Nov 2024",
       "bullets": [
-        "Bidded for assigned freelancer and agency projects on Upwork, converting $100+ projects"
+        "Sourced client work on Upwork for a team of assigned freelancers, handling proposals and client communication through to project award, converting $100+ projects"
       ],
       "tech": ["Strategy", "Sales", "Bidding", "Upwork", "Proposal Writing"]
     },
@@ -55,7 +78,7 @@
       "date": "Oct 2020 — Present",
       "bullets": [
         "Ran independent e-commerce art and craft store reaching 1000+ customers",
-        "Sold custimized polaroids, stickers, frames, and more through Instagram and WhatsApp",
+        "Sold customized polaroids, stickers, frames, and more through Instagram and WhatsApp",
         "Managed inventory, marketing, fulfillment, and customer support"
       ],
       "tech": ["E-commerce", "Marketing", "Operations", "Adobe Illustrator", "Canva"]

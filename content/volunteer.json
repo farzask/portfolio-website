@@ -1,19 +1,34 @@
 {
   "items": [
     {
+      "role": "Event Management Team Lead",
+      "org": "Cloud Native Peshawar",
+      "date": "Jul 2026 — Present"
+    },
+    {
+      "role": "Event Lead",
+      "org": "DigTech 2026, CECOS University",
+      "date": "Jun 2026 — Jul 2026"
+    },
+    {
+      "role": "Management Lead",
+      "org": "HEC Progress Review Meeting",
+      "date": "Dec 2025"
+    },
+    {
+      "role": "Organizer",
+      "org": "ICHARRM Conference",
+      "date": "Nov 2025"
+    },
+    {
       "role": "Campus Director",
       "org": "Zindigi Prize CECOS",
-      "date": "2024 — 2026"
+      "date": "Dec 2024 — Jul 2026"
     },
     {
       "role": "Vice President",
       "org": "CECOS International Mathematical Union",
-      "date": "2023 — 2024"
-    },
-    {
-      "role": "Event Lead",
-      "org": "DigTech 2026",
-      "date": "June 2026 - July 2026"
+      "date": "Dec 2024 — Jul 2026"
     }
   ]
 }

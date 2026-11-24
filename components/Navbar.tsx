@@ -61,7 +61,7 @@ export default function Navbar() {
             Available
           </span>
           <a
-            href="FarzaShahzad_Resume_SoftwareDeveloper.pdf"
+            href="/FarzaShahzad_Resume_SoftwareDeveloper.pdf"
             download
             className="label border border-ink px-3 py-1.5 text-ink hover:bg-ink hover:text-paper transition-colors"
           >
@@ -101,7 +101,7 @@ export default function Navbar() {
               ))}
               <li className="p-5">
                 <a
-                  href="/Farza_Shahzad_CV.pdf"
+                  href="/FarzaShahzad_Resume_SoftwareDeveloper.pdf"
                   download
                   className="label border border-ink inline-block px-4 py-2 text-ink"
                 >

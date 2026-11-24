@@ -8,7 +8,7 @@ import SiteChrome from '@/components/SiteChrome'
 const SITE_URL = 'https://farza-shahzad.vercel.app'
 const TITLE = 'Farza Shahzad — Full Stack Developer'
 const DESCRIPTION =
-  'Portfolio of Farza Shahzad, a full stack developer building Flutter apps and full-stack web products with React, Next.js, Node.js, Python, and IoT integrations.'
+  'Portfolio of Farza Shahzad, a full stack developer building Flutter apps and full-stack web products with React, Next.js, Python, and IoT integrations.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -67,7 +67,6 @@ const jsonLd = {
     'Next.js',
     'React',
     'TypeScript',
-    'Node.js',
     'Python',
     'IoT',
     'ESP32',
