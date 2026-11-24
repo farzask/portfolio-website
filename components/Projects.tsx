@@ -21,7 +21,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
     <section id="projects" className="relative border-t border-ink">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 lg:py-24">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-          <SectionHeading index="04" eyebrow="Index">
+          <SectionHeading index="05" eyebrow="Index">
             Selected <span className="text-accent">work.</span>
           </SectionHeading>
 

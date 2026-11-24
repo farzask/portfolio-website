@@ -8,8 +8,9 @@ const links = [
   { num: '01', label: 'About', href: '#about' },
   { num: '02', label: 'Skills', href: '#skills' },
   { num: '03', label: 'Work', href: '#experience' },
-  { num: '04', label: 'Projects', href: '#projects' },
-  { num: '05', label: 'Contact', href: '#contact' },
+  { num: '04', label: 'Education & Leadership', href: '#education' },
+  { num: '05', label: 'Projects', href: '#projects' },
+  { num: '06', label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {
@@ -35,16 +36,16 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-paper border-b border-ink">
       <nav className="mx-auto max-w-6xl px-5 sm:px-8 h-14 flex items-center justify-between">
-        <a href="#home" className="label font-bold text-ink">
+        <a href="#home" className="label font-bold text-ink whitespace-nowrap">
           Farza Shahzad<span className="text-accent">®</span>
         </a>
 
-        <ul className="hidden md:flex items-center gap-7">
+        <ul className="hidden lg:flex items-center gap-5 xl:gap-7">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className={`label inline-flex items-center gap-1.5 transition-colors ${
+                className={`label inline-flex items-center gap-1.5 whitespace-nowrap transition-colors ${
                   active === l.href ? 'text-accent' : 'text-ink/60 hover:text-ink'
                 }`}
               >
@@ -55,8 +56,8 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden md:flex items-center gap-4">
-          <span className="label flex items-center gap-1.5 text-ink/60">
+        <div className="hidden lg:flex items-center gap-4">
+          <span className="label hidden xl:flex items-center gap-1.5 text-ink/60">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             Available
           </span>
@@ -72,7 +73,7 @@ export default function Navbar() {
         <button
           aria-label={open ? 'Close menu' : 'Open menu'}
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden p-1 text-ink"
+          className="lg:hidden p-1 text-ink"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -84,7 +85,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="md:hidden fixed inset-0 top-14 bg-paper"
+            className="lg:hidden fixed inset-0 top-14 bg-paper"
           >
             <ul className="flex flex-col">
               {links.map((l) => (

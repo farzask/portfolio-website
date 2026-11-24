@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <section id="contact" className="relative border-t border-ink">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 lg:py-24">
-        <SectionHeading index="05" eyebrow="Contact">
+        <SectionHeading index="06" eyebrow="Contact">
           Let&apos;s build<br />
           <span className="text-accent">something.</span>
         </SectionHeading>
